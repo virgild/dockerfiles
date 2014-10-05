@@ -1,7 +1,7 @@
 FROM virgild/centos7
 MAINTAINER Virgil Dimaguila "virgild@gmail.com"
 
-RUN yum install gcc make openssl-devel ncurses-devel readline-devel -y
+RUN yum install gcc make openssl-devel ncurses-devel readline-devel git tar -y
 RUN cd /tmp &&  \
   git clone https://github.com/sstephenson/ruby-build.git && \
   cd ruby-build && \
