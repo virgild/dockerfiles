@@ -1,7 +1,7 @@
 FROM virgild/ruby2
 MAINTAINER Virgil Dimaguila "virgild@gmail.com"
 
-ENV REFRESH_DATE "Thu Aug 28 20:43:56 2014"
+ENV PATH /opt/ruby/2.1.3/bin:$PATH
 
 RUN yum install gcc-c++ curl-devel pcre-devel -y
 RUN /opt/ruby/2.1.3/bin/gem install passenger --no-rdoc --no-ri
