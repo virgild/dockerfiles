@@ -10,6 +10,7 @@ RUN \
   echo "/usr/bin/mysqld_safe --basedir=/usr &" > /tmp/config && \
   echo "cat /var/log/mariadb/mariadb.log" >> /tmp/config && \
   echo "mysqladmin --silent --wait=30 ping || exit 1" >> /tmp/config && \
+  echo "mysql -e 'GRANT ALL PRIVILEGES ON *.* TO \"root\"@\"%\" WITH GRANT OPTION;'" >> /tmp/config && \
   bash /tmp/config && \
   rm -f /tmp/config
 
